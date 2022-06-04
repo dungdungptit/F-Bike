@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - F-Bike</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet'
+        type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+
+    <!-- Google Materrial - Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header" class="header"></div>
+        <section id="product" class="product">
+            <div class="product-container">
+                <div class="product-top">
+                    <div class="product-top-title">
+                        <h3 class="heading-page">
+                            <a href="index.html">Shop</a> / <span>Product</span>
+                        </h3>
+                    </div>
+                    <div class="product-top-sort-by">
+                        <div class="product-top-sort-by-title">
+                            <h3>Sort by:</h3>
+                        </div>
+                        <div class="product-top-sort-by-select">
+                            <select name="sort-by" id="sort-by">
+                                <option value="">Default</option>
+                                <option value="">Name (A - Z)</option>
+                                <option value="">Name (Z - A)</option>
+                                <option value="">Price (Low &gt; High)</option>
+                                <option value="">Price (High &gt; Low)</option>
+                                <option value="">Lastest</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-body">
+                    <div class="product-body-filter">
+                        <div class="product-body-filter-title">
+                            <h3>Filter:</h3>
+                        </div>
+                        <div class="product-body-filter-select">
+                            <select name="filter" id="filter">
+                                <option value="">All</option>
+                                <option value="">Bikes</option>
+                                <option value="">Frameset</option>
+                                <option value="">Component</option>
+                                <option value="">Accessories</option>
+                            </select>
+                        </div>
+                        <div class="product-body-filter-brand">
+                            <h3>Brand</h3>
+                            <div class="product-body-filter-brand-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="brand-1" name="brand-1" />
+                                        <label for="brand-1">Brand 1</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand-2" name="brand-2" />
+                                        <label for="brand-2">Brand 2</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="brand-3" name="brand-3" />
+                                        <label for="brand-3">Brand 3</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-price">
+                            <h3>Price</h3>
+                            <div class="product-body-filter-price-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="price-1" name="price-1" />
+                                        <label for="price-1">$0 - $100</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-2" name="price-2" />
+                                        <label for="price-2">$100 - $200</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-3" name="price-3" />
+                                        <label for="price-3">$200 - $300</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-4" name="price-4" />
+                                        <label for="price-4">$300 - $400</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="price-5" name="price-5" />
+                                        <label for="price-5">$400 - $500</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-size">
+                            <h3>Size</h3>
+                            <div class="product-body-filter-size-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="size-1" name="size-1" />
+                                        <label for="size-1">XS</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-2" name="size-2" />
+                                        <label for="size-2">S</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-3" name="size-3" />
+                                        <label for="size-3">M</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-4" name="size-4" />
+                                        <label for="size-4">L</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="size-5" name="size-5" />
+                                        <label for="size-5">XL</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-color">
+                            <h3>Color</h3>
+                            <div class="product-body-filter-color-list">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="color-1" name="color-1" />
+                                        <label for="color-1">Red</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="color-2" name="color-2" />
+                                        <label for="color-2">Blue</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="color-3" name="color-3" />
+                                        <label for="color-3">Green</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="color-4" name="color-4" />
+                                        <label for="color-4">Yellow</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="color-5" name="color-5" />
+                                        <label for="color-5">Black</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-body-filter-button">
+                            <button type="submit" class="btn btn-cart">Filter</button>
+                        </div>
+                    </div>
+                    <div id="product-body-list">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="footer" class="footer"></div>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        function cartPage() {
+            window.location.href = "cart.html";
+        }
+
+        $(document).ready(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+
+        // products and products-Storage
+
+        let dataProducts = `[
+            {
+                "id": 1,
+                "name": "Product 1",
+                "price": 10.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-1.jpg"
+            },
+            {
+                "id": 2,
+                "name": "Product 2",
+                "price": 20.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-2.jpg"
+            },
+            {
+                "id": 3,
+                "name": "Product 3",
+                "price": 30.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-3.jpg"
+            },
+            {
+                "id": 4,
+                "name": "Product 4",
+                "price": 40.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-4.jpg"
+            },
+            {
+                "id": 5,
+                "name": "Product 5",
+                "price": 50.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-5.jpg"
+            },
+            {
+                "id": 6,
+                "name": "Product 6",
+                "price": 60.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-6.jpg"
+            },
+            {
+                "id": 7,
+                "name": "Product 7",
+                "price": 70.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-7.jpg"
+            },
+            {
+                "id": 8,
+                "name": "Product 8",
+                "price": 80.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-8.jpg"
+            },
+            {
+                "id": 9,
+                "name": "Product 9",
+                "price": 90.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-9.jpg"
+            },
+            {
+                "id": 10,
+                "name": "Product 10",
+                "price": 100.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-10.jpg"
+            }
+        ]`;
+
+        let products = JSON.parse(dataProducts);
+
+        console.log(products);
+        function displayProducts() {
+            let html = "";
+            for (let i = 0; i < products.length; i++) {
+                html += `
+                <div id="${products[i].id}" class="product-body-list-item">
+                    <div class="product-body-list-item-image">
+                        <img src="${products[i].image}" height = "80" alt="">
+                    </div>
+                    <div class="product-body-list-item-title">
+                        <h4>
+                            <a href="#" onclick="viewProduct(${products[i].id})">${products[i].name}</a>
+                        </h4>
+                    </div>
+                    <div class="product-body-list-item-price">
+                        <h4>$${products[i].price}</h4>
+                    </div>
+                    <div class="product-body-list-item-button">
+                        <a href="#" class="btn btn-cart" onclick="addItem(${products[i].id})">Add to cart</a>
+                        <a href="#" class="btn btn-cart" onclick="viewProduct(${products[i].id})">View</a>
+                    </div>
+                </div>
+                `;
+            }
+            $("#product-body-list").html(html);
+        }
+
+        displayProducts();
+
+        // view 1 product
+        var storageKeyProducts = "products";
+        localStorage.setItem(storageKeyProducts, JSON.stringify(products));
+
+        var storageKeyViewProduct = "viewProduct";
+
+        function viewProduct(id) {
+            for (let i = 0; i < products.length; i++) {
+                if (products[i].id == id) {
+                    localStorage.setItem(storageKeyViewProduct, JSON.stringify(products[i]));
+                }
+            }
+            window.location.href = "product-detail.html";
+        }
+
+
+        // cart local storage
+        var storageKey = "cart";
+        var cart = [];
+
+        var cartItem = {
+            "id": "1",
+            "idProduct": "1",
+            "name": "Bike",
+            "price": "100",
+            "image": "assets/images/product-1.jpg",
+            "quantity": "1"
+        };
+
+
+        function addItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+                cartItem.id = "1";
+            }
+            else {
+                cartItem.id = cart.length + 1;
+            }
+            let item = products.find(function (item) {
+                return item.id == id;
+            });
+            cartItem.idProduct = item.id;
+            cartItem.name = item.name;
+            cartItem.price = item.price;
+            cartItem.image = item.image;
+            cartItem.quantity = 1;
+            cart.push(cartItem);
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            console.log(localStorage.getItem(storageKey));
+            cartHeader();
+            showCart();
+        }
+
+        function resetIdCart() {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+            }
+            else {
+                for (let i = 0; i < cart.length; i++) {
+                    cart[i].id = i + 1;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+        }
+
+        function showCart() {
+            resetIdCart();
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            if (cart == null) {
+                cart = [];
+            }
+            var cartList = $("#cart");
+            cartList.empty();
+            var total = 0;
+            for (var i = 0; i < cart.length; i++) {
+                var item = cart[i];
+                var itemHtml =
+                    `<tr>
+                        <td>${item.id}</td>
+                        <td>${item.name}</td>
+                        <td><img src="${item.image}" height="40" alt=""></td>
+                        <td>${item.price}</td>
+                        <td>
+                            <input id="cart${item.id}" type="number" value="${item.quantity}">
+                        </td>
+                        <td>${item.price * item.quantity}</td>
+                        <td><button onclick="updateItem(${item.id})">Update</button></td>
+                        <td><button onclick="removeItem(${item.id})">Remove</button></td>
+                        </tr>`;
+                cartList.append(itemHtml);
+                total += parseInt(item.price) * parseInt(item.quantity);
+            }
+            $("#cart-total").html(`<h3>Total: $${total}</h3>`);
+        }
+
+        function updateItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            var quantity = $("#cart" + id).val();
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].id == id) {
+                    cart[i].quantity = quantity;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            showCart();
+        }
+
+        function removeItem(id) {
+            var cart = JSON.parse(localStorage.getItem(storageKey));
+            for (var i = 0; i < cart.length; i++) {
+                if (cart[i].id == id) {
+                    cart.splice(i, 1);
+                    break;
+                }
+            }
+            localStorage.setItem(storageKey, JSON.stringify(cart));
+            cartHeader();
+            showCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem(storageKey);
+            showCart();
+            cartHeader();
+        }
+
+        function cartHeader() {
+            var cart = localStorage.getItem(storageKey);
+            if (cart) {
+                cart = JSON.parse(cart);
+                var cartTotal = 0;
+                for (var i = 0; i < cart.length; i++) {
+                    cartTotal += cart[i].quantity * cart[i].price;
+                }
+                $("#cart-count").text("Cart(" + cart.length + ")");
+                $("#cart-total").text("/ $" + cartTotal);
+            }
+            $("#cart-mini").show();
+            $("#cart-mini").css("display", "flex");
+            $("#cart-mini").css("opacity", "1");
+            $("#cart-mini").css("transition", "all 0.5s ease-in-out");
+        }
+
+        showCart();
+
+
+    </script>
+</body>
+
+</html>
