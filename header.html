@@ -95,6 +95,11 @@
                         <i class="fa-solid fa-heart"></i>
                     </button>
                 </div>
+                <div class="header-menu">
+                    <button id="btn-menu" class="btn btn-login">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -141,6 +146,8 @@
 <script>
     $(document).ready(function () {
         var prevScrollpos = 159;
+        var headerHeight = $('.header-wrapper').height();
+        console.log(headerHeight);
         window.onscroll = function () {
             var currentScrollPos = document.documentElement.scrollTop;
             if (prevScrollpos > currentScrollPos) {
@@ -154,6 +161,12 @@
             }
             prevScrollpos = currentScrollPos;
         }
+
+        $("#btn-menu").click(function () {
+            $(".header-bottom").fadeToggle("slow");
+        });
+
+        
     });
     // cart local storage
     var storageKey = "cart";

@@ -265,10 +265,74 @@
                 "price": 100.00,
                 "description": "This is a product description",
                 "image": "assets/images/product-10.jpg"
+            },
+            {
+                "id": 11,
+                "name": "Product 11",
+                "price": 110.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-01.webp"
+            },
+            {
+                "id": 12,
+                "name": "Product 12",
+                "price": 120.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-02.webp"
+            },
+            {
+                "id": 13,
+                "name": "Product 13",
+                "price": 130.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-03.webp"
+            },
+            {
+                "id": 14,
+                "name": "Product 14",
+                "price": 140.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-04.webp"
+            },
+            {
+                "id": 15,
+                "name": "Product 15",
+                "price": 150.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-05.webp"
+            },
+            {
+                "id": 16,
+                "name": "Product 16",
+                "price": 160.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-06.webp"
+            },
+            {
+                "id": 17,
+                "name": "Product 17",
+                "price": 170.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-07.webp"
+            },
+            {
+                "id": 18,
+                "name": "Product 18",
+                "price": 180.00,
+                "description": "This is a product description",
+                "image": "assets/images/product-08.webp"
             }
         ]`;
 
-        let products = JSON.parse(dataProducts);
+        let products;
+        if(localStorage.getItem("products") === null) {
+            products = JSON.parse(dataProducts);
+            localStorage.setItem("products", JSON.stringify(products));
+        } else {
+            products = JSON.parse(localStorage.getItem("products"));
+        }
+
+        // products-Storage
 
         console.log(products);
         function displayProducts() {
@@ -280,16 +344,14 @@
                         <img src="${products[i].image}" height = "80" alt="">
                     </div>
                     <div class="product-body-list-item-title">
-                        <h4>
-                            <a href="#" onclick="viewProduct(${products[i].id})">${products[i].name}</a>
-                        </h4>
+                        <h4 onclick="viewProduct(${products[i].id})">${products[i].name}</h4>
                     </div>
                     <div class="product-body-list-item-price">
                         <h4>$${products[i].price}</h4>
                     </div>
                     <div class="product-body-list-item-button">
-                        <a href="#" class="btn btn-cart" onclick="addItem(${products[i].id})">Add to cart</a>
-                        <a href="#" class="btn btn-cart" onclick="viewProduct(${products[i].id})">View</a>
+                        <button class="btn btn-cart" onclick="addItem(${products[i].id})">Add to cart</button>
+                        <button class="btn btn-cart" onclick="viewProduct(${products[i].id})">View</button>
                     </div>
                 </div>
                 `;
@@ -448,6 +510,8 @@
 
 
     </script>
+    <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
